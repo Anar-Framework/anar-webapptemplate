@@ -60,7 +60,7 @@ import {
 	Subheader5Component,
 	SubheaderSearchComponent,
 	UserProfile2Component,
-	UserProfile3Component,
+
 	UserProfileComponent,
 } from './layout';
 // General
@@ -105,7 +105,6 @@ import {CartComponent} from './layout/topbar/cart/cart.component';
 		SearchDropdownComponent,
 		UserProfileComponent,
 		UserProfile2Component,
-		UserProfile3Component,
 		CartComponent,
 
 		ErrorComponent,
@@ -143,7 +142,6 @@ import {CartComponent} from './layout/topbar/cart/cart.component';
 		SearchDropdownComponent,
 		UserProfileComponent,
 		UserProfile2Component,
-		UserProfile3Component,
 		CartComponent,
 
 		ErrorComponent,

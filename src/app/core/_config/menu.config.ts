@@ -7,7 +7,7 @@ export class MenuConfig {
 					title: 'Dashboards',
 					root: true,
 					alignment: 'left',
-					page: '/dashboard',
+					page: '',
 					translate: 'MENU.DASHBOARD',
 				},
 				{

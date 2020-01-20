@@ -13,10 +13,6 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 // UI
 import { PartialsModule } from '../../../partials/partials.module';
-// Core
-import { FakeApiService } from '../../../../core/_base/layout';
-// Auth
-import { ModuleGuard } from '../../../../core/auth';
 // Core => Services
 import {
 	customersReducer,
@@ -160,10 +156,10 @@ const routes: Routes = [
 		MatTabsModule,
 		MatTooltipModule,
 		NgbProgressbarModule,
-		environment.isMockEnabled ? HttpClientInMemoryWebApiModule.forFeature(FakeApiService, {
-			passThruUnknownUrl: true,
-        	dataEncapsulation: false
-		}) : [],
+		// environment.isMockEnabled ? HttpClientInMemoryWebApiModule.forFeature(FakeApiService, {
+		// 	passThruUnknownUrl: true,
+        // 	dataEncapsulation: false
+		// }) : [],
 		StoreModule.forFeature('products', productsReducer),
 		EffectsModule.forFeature([ProductEffects]),
 		StoreModule.forFeature('customers', customersReducer),
@@ -174,7 +170,6 @@ const routes: Routes = [
 		EffectsModule.forFeature([ProductSpecificationEffects]),
 	],
 	providers: [
-		ModuleGuard,
 		InterceptService,
       	{
         	provide: HTTP_INTERCEPTORS,
