@@ -133,10 +133,15 @@ export function kcInitializer(keycloak: KeycloakService): () => Promise<any> {
 		TranslateModule.forRoot(),
 		MatProgressSpinnerModule,
 		InlineSVGModule.forRoot(),
-		ThemeModule
+		ThemeModule,
+		KeycloakAngularModule
 	],
 	exports: [],
+
 	providers: [
+		DatePipe,
+		{ provide: APP_INITIALIZER, useFactory: kcInitializer, multi: true, deps: [KeycloakService] },
+		{ provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
 		// AuthService,
 		LayoutConfigService,
 		LayoutRefService,
