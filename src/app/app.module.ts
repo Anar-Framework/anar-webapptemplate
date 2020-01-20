@@ -33,6 +33,16 @@ import { CoreModule } from './core/core.module';
 import { ThemeModule } from "./views/theme/theme.module";
 // Partials
 import { PartialsModule } from './views/partials/partials.module';
+
+//Keycloak
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { KeycloakService, KeycloakAngularModule } from 'keycloak-angular';
+
+import { HttpErrorInterceptor} from './core/interceptor/http-error.interceptor';
+
 // Layout Services
 import {
 	DataTableService,
@@ -82,6 +92,23 @@ export function hljsLanguages(): HighlightLanguage[] {
 		{name: 'json', func: json}
 	];
 }
+
+
+export function kcInitializer(keycloak: KeycloakService): () => Promise<any> {
+	return (): Promise<any> => {
+	  return new Promise(async (resolve, reject) => {
+		try {
+		  await keycloak.init(environment.keycloakOptions);
+		  console.log('Keycloak is initialized');
+		  resolve();
+		} catch (error) {
+		  console.log('Error thrown in init ' + error);
+		  reject(error);
+		}
+	  });
+	};
+  }
+  
 
 @NgModule({
 	declarations: [AppComponent],
