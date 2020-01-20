@@ -31,7 +31,6 @@ import {
 // Core => Utils
 import { HttpUtilsService,
 	TypesUtilsService,
-	InterceptService,
 	LayoutUtilsService
 } from '../../../../core/_base/crud';
 // Shared
@@ -170,12 +169,6 @@ const routes: Routes = [
 		EffectsModule.forFeature([ProductSpecificationEffects]),
 	],
 	providers: [
-		InterceptService,
-      	{
-        	provide: HTTP_INTERCEPTORS,
-       	 	useClass: InterceptService,
-        	multi: true
-      	},
 		{
 			provide: MAT_DIALOG_DEFAULT_OPTIONS,
 			useValue: {

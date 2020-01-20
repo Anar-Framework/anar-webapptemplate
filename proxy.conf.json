@@ -4,10 +4,5 @@
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
-    },
-    "/logout": {
-        "target": "http://localhost:7001",
-        "secure": false,
-        "logLevel": "debug"
     }
 }

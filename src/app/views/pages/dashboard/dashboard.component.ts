@@ -6,6 +6,7 @@ import { shuffle } from 'lodash';
 // Widgets model
 import { LayoutConfigService, SparklineChartOptions } from '../../../core/_base/layout';
 import { Widget4Data } from '../../partials/content/widgets/widget4/widget4.component';
+import { TestService } from '../../../core/service/test.service';
 
 @Component({
 	selector: 'kt-dashboard',
@@ -22,7 +23,12 @@ export class DashboardComponent implements OnInit {
 	widget4_3: Widget4Data;
 	widget4_4: Widget4Data;
 
-	constructor(private layoutConfigService: LayoutConfigService) {
+	constructor(private layoutConfigService: LayoutConfigService, private testService: TestService) {
+
+		this.testService.testApi().subscribe(res => {
+			console.log("Response of TestAPI", res);
+			
+		});
 	}
 
 	ngOnInit(): void {
