@@ -14,6 +14,8 @@
     },
     "private": true,
     "dependencies": {
+        "keycloak-angular": "^7.1.0",
+        "keycloak-js": "8.0.1",
         "@angular/animations": "^8.2.5",
         "@angular/cdk": "^8.1.1",
         "@angular/common": "^8.2.5",
