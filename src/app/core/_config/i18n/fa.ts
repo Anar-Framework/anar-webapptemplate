@@ -12,7 +12,10 @@ export const locale = {
 			PAGES: 'صحفات',
 			FEATURES: 'خصوصیات',
 			APPS: 'اپلیکشن ها',
-			DASHBOARD: 'دشبورد',
+            DASHBOARD: 'دشبورد',
+            COMPONENTS: 'مادیول ها',
+            CUSTOMS: 'دیگر موارد'
+            
 		},
 		AUTH: {
 			GENERAL: {

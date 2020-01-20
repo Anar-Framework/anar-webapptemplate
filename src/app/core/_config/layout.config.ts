@@ -7,18 +7,19 @@ export class LayoutConfig {
 		'self': {
 			'layout': 'fluid', // fluid|boxed
 			'body': {
-				'background-image': './assets/media/misc/bg-1.jpg',
+				// 'background-image': './assets/media/flags/nsia.svg',
 			},
 			'logo': {
-				'desktop': './assets/media/logos/logo-9.png',
-				'sticky': './assets/media/logos/logo-9-sm.png',
+				'desktop': './assets/media/flags/nsia.jpeg',
+				'sticky': './assets/media/flags/nsia.svg',
+				'mobile': './assets/media/flags/nsia.svg',
 			},
 		},
 		// == Page Splash Screen loading
 		'loader': {
 			'enabled': true,
 			'type': 'spinner-logo',
-			'logo': './assets/media/logos/logo-mini-md.png',
+			'logo': './assets/media/flags/nsia.svg',
 			'message': 'Please wait...',
 		},
 		// == Colors for javascript

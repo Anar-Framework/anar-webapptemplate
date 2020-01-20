@@ -11,8 +11,10 @@ export const locale = {
 			CREATE_POST: 'Create New Post',
 			PAGES: 'Pages',
 			FEATURES: 'Features',
-			APPS: 'Apps',
+			COMPONENTS: 'Components',
+			APPS: 'Applications',
 			DASHBOARD: 'Dashboard',
+			CUSTOMS: 'Customs'
 		},
 		AUTH: {
 			GENERAL: {

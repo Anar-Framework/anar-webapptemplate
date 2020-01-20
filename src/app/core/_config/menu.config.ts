@@ -15,6 +15,7 @@ export class MenuConfig {
 					root: true,
 					alignment: 'left',
 					toggle: 'click',
+					translate: 'MENU.COMPONENTS',
 					submenu: [
 						{
 							title: 'Google Material',
@@ -278,6 +279,7 @@ export class MenuConfig {
 					root: true,
 					alignment: 'left',
 					toggle: 'click',
+					translate: 'MENU.APPS',
 					submenu: [
 						{
 							title: 'eCommerce',
@@ -317,6 +319,7 @@ export class MenuConfig {
 					root: true,
 					alignment: 'left',
 					toggle: 'click',
+					translate: 'MENU.CUSTOMS',
 					submenu: [
 						{
 							title: 'Error Pages',
